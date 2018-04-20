@@ -1,0 +1,104 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Fri Mar 30 18:07:35 2018
+| Host         : DESKTOP-96CVL4U running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file AUDIO_FX_TOP_control_sets_placed.rpt
+| Design       : AUDIO_FX_TOP
+| Device       : xc7a35t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    51 |
+| Unused register locations in slices containing registers |   256 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             192 |           95 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             508 |          147 |
+| Yes          | No                    | No                     |              27 |           10 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              25 |            5 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-------------------------------------+----------------------------------+------------------+----------------+
+|      Clock Signal      |            Enable Signal            |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++------------------------+-------------------------------------+----------------------------------+------------------+----------------+
+|  EF1/CLK50MHZ          | EF1/uut/db_data/Iv_i_1__0_n_0       |                                  |                1 |              1 |
+|  T1/clk                |                                     |                                  |                1 |              1 |
+|  EF1/CLK50MHZ          | EF1/uut/db_clk/O_i_1_n_0            |                                  |                1 |              1 |
+|  EF1/CLK50MHZ          | EF1/uut/db_clk/clear                |                                  |                1 |              1 |
+|  EF1/CLK50MHZ          | EF1/uut/db_data/O_i_1__0_n_0        |                                  |                1 |              1 |
+|  u2/J_DA2_Pin4_OBUF    |                                     |                                  |                1 |              2 |
+|  u2/J_DA2_Pin4_OBUF    | u2/shiftCounter[3]_i_1_n_0          | u2/temp1[15]_i_1_n_0             |                1 |              4 |
+|  u2/J_DA2_Pin4_OBUF    | u2/temp2                            | u2/temp1[15]_i_1_n_0             |                1 |              4 |
+| ~EF1/uut/db_clk/kclkf  | EF1/cnt                             | EF1/uut/cnt[3]_i_1_n_0           |                1 |              4 |
+|  EF1/CLK50MHZ          | EF1/uut/db_data/count[4]_i_1__0_n_0 | EF1/uut/db_data/Iv_i_1__0_n_0    |                1 |              5 |
+|  EF1/CLK50MHZ          |                                     |                                  |                3 |              6 |
+|  CLK_IBUF_BUFG         |                                     | B21/switch[5]_i_1_n_0            |                1 |              6 |
+|  CLK_IBUF_BUFG         | B21/count10                         | B21/count1[2]_i_1_n_0            |                1 |              8 |
+| ~EF1/uut/db_clk/kclkf  |                                     |                                  |                4 |              9 |
+|  T1/clk_40k            |                                     |                                  |                4 |             10 |
+|  EF1/CLK50MHZ          | EF1/uut/keycode[15]_i_1_n_0         |                                  |                2 |             11 |
+|  CLK_IBUF_BUFG         |                                     | T1/count1[11]_i_1_n_0            |                3 |             11 |
+|  CLK_IBUF_BUFG         |                                     | T1/count3[11]_i_1_n_0            |                3 |             11 |
+|  u2/J_DA2_Pin4_OBUF    | u2/temp2                            |                                  |                4 |             12 |
+|  CLK_IBUF_BUFG         |                                     | T1/count4[12]_i_1_n_0            |                3 |             12 |
+|  CLK_IBUF_BUFG         |                                     | J_MIC3_Pin1_OBUF_BUFG            |                3 |             12 |
+|  J_MIC3_Pin1_OBUF_BUFG |                                     | A1/read_index_rep[13]_i_1__0_n_0 |                4 |             14 |
+|  J_MIC3_Pin1_OBUF_BUFG |                                     | A1/write_index[14]_i_1_n_0       |                4 |             14 |
+|  T1/clk_10k            |                                     | A4/read_index[14]_i_1_n_0        |                5 |             15 |
+|  J_MIC3_Pin1_OBUF_BUFG |                                     | A4/write_index[14]_i_1__0_n_0    |                5 |             15 |
+|  J_MIC3_Pin1_OBUF_BUFG |                                     | A2/read_index_rep[14]_i_1_n_0    |                5 |             16 |
+|  J_MIC3_Pin1_OBUF_BUFG |                                     | A2/write_index[0]_i_1_n_0        |                4 |             16 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[5][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[6][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B22/count[0][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B22/count[1][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B22/count[2][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B22/count[3][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B22/count[4][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B22/count[5][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[0][17]_i_1__1_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[1][17]_i_1__1_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[2][17]_i_1__1_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[3][17]_i_1__1_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[4][17]_i_1__1_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[5][17]_i_1__1_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | EF2/count[6][17]_i_1__0_n_0      |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[0][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[1][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[2][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[3][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B11/count[4][17]_i_1_n_0         |                5 |             17 |
+|  CLK_IBUF_BUFG         |                                     | B21/count[0]_i_1__1_n_0          |                7 |             26 |
+| ~J_MIC3_Pin4_OBUF_BUFG |                                     |                                  |               16 |             48 |
+|  CLK_IBUF_BUFG         |                                     |                                  |               43 |             56 |
+|  J_MIC3_Pin1_OBUF_BUFG |                                     |                                  |               23 |             60 |
++------------------------+-------------------------------------+----------------------------------+------------------+----------------+
+
+
